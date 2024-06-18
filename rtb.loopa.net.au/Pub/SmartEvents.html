@@ -1,0 +1,55 @@
+ (function () { var loopaSmartEvents = window._loopaSmartEvents; loopaSmartEvents.publisherData = { pubId: '65dee956844c5ec0d0290601', siteScript: '\\n
+<script>
+    \\
+    n! function(f, b, e, v, n, t, s)\\ n {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? \\nn.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };\\
+            nif(!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = \'2.0\';\\nn.queue=[];t=b.createElement(e);t.async=!0;\\nt.src=v;s=b.getElementsByTagName(e)[0];\\ns.parentNode.insertBefore(t,s)}(window, document,\'script\',\\n\'https://connect.facebook.net/en_US/fbevents.js\');\\nfbq(\'init\', \'162214088693181\');\\nfbq(\'track\', \'PageView\');\\n
+</script>\\n<noscript><img height="1" width="1" style="display:none"\\nsrc="https://www.facebook.com/tr?id=162214088693181&ev=PageView&noscript=1"\\n/></noscript>\\n\\n\\n
+<script>
+    \\
+    ndocument.querySelectorAll("a[href*=\'tel:\']").forEach((item) => {\\
+                n item.addEventListener("click", function() {\\
+                            n loopa.push({\\
+                                        n event: \ 'conversion\',\\n			data: { type: "ClickToCall", products: _loopaSmartEvents.productParsingData.productId() }\\n		});\\n	});\\n});\\n\\ndocument.querySelectorAll("a[href*=\'mailto:\']").forEach((item) => {\\n	item.addEventListener("click", function () {\\n		loopa.push({\\n			event: \'conversion\',\\n			data: { type: "ClickToEmail", products: _loopaSmartEvents.productParsingData.productId() }\\n		});\\n	});\\n});\\n  \\nif (window.location.href.includes("newsletter&form_type=customer#contact_form") && document.querySelector(\'small[id^="Newsletter-error"]\') == null) {\\n    loopa.push({\\n        event: \'conversion\',\\n        data: { type: "NewsletterSignUp", products: _loopaSmartEvents.productParsingData.productId() }\\n    });\\n}\\n\\nif (window.location.href.includes("contact_posted=true#ContactForm")) {\\n    loopa.push({\\n        event: \'conversion\',\\n        data: { type: "FormFillSubmission", products: _loopaSmartEvents.productParsingData.productId() }\\n    });\\n}\\n\\n
+</script>', productScript: '', conversionScript: '
+<script>
+    \\
+    n fbq(\'trackSingle\', \'162214088693181\', \'Lead\', {\\n    enquiryType: \'[[TYPE]]\',\\n  });\\n
+</script>\\n\\n
+<script>
+    \\
+    nvar conversionType = "[[TYPE]]";\\
+    nswitch(conversionType) {\\
+        n
+        case "ClickToCall":
+            \\n
+            break;\\
+            n
+        case "ClickToEmail":
+            \\n
+            break;\\
+            n
+        case "NewsletterSignUp":
+            \\n
+            break;\\
+            n
+        case "FormFillSubmission":
+            \\n
+            break;\\
+            n
+    }\\
+    n
+</script>', addToCartScript: '', genericActionScript: '', allowCookieMessage: false, messageSelector: '', includePostscribe: false, autoTriggerOnHashChange: false, enableEU: false, postParsedData: false, audienceSplitScript: '', enableActionTracking:
+false }; loopaSmartEvents.productParsingData = { title: function() { return '' }, itemUrl: function() { return '' }, productId: function() { return "" }, description: function() { return '' }, mainImage: function() { return '' }, images: function() {
+return '' }, language: function() { return '' }, price: function() { return '' }, rrp: function() { return '' }, brandName: function() { return '' }, colour: function() { return '' }, stock: function() { return '' }, category: function() { return '' },
+subCategory: function() { return '' }, mpn: function() { return '' }, gtin: function() { return '' }, productType: function() { return '' }, customField1: function() { return '' }, customField2: function() { return '' }, customField3: function() { return
+'' }, customField4: function() { return '' }, customField5: function() { return '' }, customField6: function() { return '' }, customField7: function() { return '' }, customField8: function() { return '' }, customField9: function() { return '' }, customField10:
+function() { return '' }, customField11: function() { return '' }, customField12: function() { return '' }, customField13: function() { return '' }, customField14: function() { return '' }, customField15: function() { return '' }, customField16: function()
+{ return '' }, latitude: function() { return '' }, longitude: function() { return '' } }; loopaSmartEvents.gdprSettings = { mode: 'BlockEu', applyRulesOutsideEu: false, cookieAllowedCheckScript: function() { return false }, cookieDisabledCheckScript:
+function() { return false } }; loopaSmartEvents.userData = { hasCookie: false, userId: '', externalNetworks : [ { 'Url' : 'https://ib.adnxs.com/getuid?[LOOPA_URL]&externalUserId=$UID', 'Id' : '57ea24e497f79207e80e5504' } ] }; }());
